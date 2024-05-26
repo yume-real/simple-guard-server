@@ -48,7 +48,7 @@ Simple Guard Server is a security script designed to monitor SSH connections to 
    Grant execution permissions to the script:
 
    ```bash
-   chmod +x simple-guard-server.sh
+   chmod +x connects_monitor.sh
    ```
 
 5. **Run the Script**
@@ -56,7 +56,7 @@ Simple Guard Server is a security script designed to monitor SSH connections to 
    Execute the script to start monitoring SSH connections:
 
    ```bash
-   ./simple-guard-server.sh
+   ./connects_monitor.sh
    ```
 
 ### Running as a Service (Optional)
@@ -66,7 +66,7 @@ To run the script as a service and ensure it starts on boot, you can create a sy
 1. **Create Service Unit File**
 
    ```bash
-   sudo nano /etc/systemd/system/simple-guard-server.service
+   sudo nano /etc/systemd/system/connects_monitor.service
    ```
 
 2. **Add the Following Content**
@@ -76,7 +76,7 @@ To run the script as a service and ensure it starts on boot, you can create a sy
    Description=Simple Guard Server
 
    [Service]
-   ExecStart=/path/to/your/simple-guard-server.sh
+   ExecStart=/path/to/your/connects_monitor.sh
    Restart=always
    User=root
 
@@ -84,14 +84,14 @@ To run the script as a service and ensure it starts on boot, you can create a sy
    WantedBy=multi-user.target
    ```
 
-   Make sure to replace `/path/to/your/simple-guard-server.sh` with the actual path to your script.
+   Make sure to replace `/path/to/your/connects_monitor.sh` with the actual path to your script.
 
 3. **Enable and Start the Service**
 
    ```bash
    sudo systemctl daemon-reload
-   sudo systemctl enable simple-guard-server
-   sudo systemctl start simple-guard-server
+   sudo systemctl enable connects_monitor
+   sudo systemctl start connects_monitor
    ```
 
 4. **Check Service Status**
@@ -99,7 +99,7 @@ To run the script as a service and ensure it starts on boot, you can create a sy
    Verify that the service is running with:
 
    ```bash
-   sudo systemctl status simple-guard-server
+   sudo systemctl status connects_monitor
    ```
 
 ## Usage
