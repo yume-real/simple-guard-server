@@ -21,7 +21,7 @@ Simple Guard Server is a security script designed to monitor SSH connections to 
 1. **Clone the Repository**
 
    ```bash
-   git clone <REPOSITORY_URL>
+   git clone https://github.com/yume-real/simple-guard-server/
    cd Simple-Guard-Server
    ```
 
